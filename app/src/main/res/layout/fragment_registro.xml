@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.acceso.RegistroFragment">
+
+    <ImageView
+        android:id="@+id/fragment_registro_logo_app"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+
+        android:src="@drawable/app_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragment_registro_titulo" />
+
+    <TextView
+        android:id="@+id/fragment_registro_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="sans-serif"
+        android:text="Registro"
+        android:textColor="@color/unican"
+        android:textStyle="bold"
+        android:textSize="15pt"
+
+        app:layout_constraintTop_toBottomOf="@+id/fragment_registro_logo_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragment_registro_formulario_layout" />
+
+    <LinearLayout
+        android:id="@+id/fragment_registro_formulario_layout"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintTop_toBottomOf="@+id/fragment_registro_titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_registro_boton">
+
+        <TextView
+            android:id="@+id/fragment_registro_titulo_email"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/unican"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/fragment_registro_email"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:lines="1"/>
+
+        <TextView
+            android:id="@+id/fragment_registro_titulo_contrasenha"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="Contraseña"
+            android:textColor="@color/unican"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/fragment_registro_contrasenha"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:lines="1"/>
+
+        <TextView
+            android:id="@+id/fragment_registro_titulo_repita_contrasenha"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="Repita la contraseña"
+            android:textColor="@color/unican"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/fragment_registro_repite_contrasenha"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:lines="1"/>
+
+        <TextView
+            android:id="@+id/fragment_registro_error_contrasenha"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="Las contraseñas no coinciden"
+            android:textColor="@color/error"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fragment_registro_boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/boton_login"
+        android:fontFamily="sans-serif"
+        android:text="Registro"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="7pt"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_registro_formulario_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

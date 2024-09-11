@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.ListadoFragment">
+
+    <LinearLayout
+        android:id="@+id/fragment_listado_layout_caidas_pendientes"
+        android:layout_width="360dp"
+        android:layout_height="290dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_listado_boton"
+        android:background="@drawable/contorno_listado">
+        <TextView
+            android:id="@+id/fragment_listado_titulo_pendientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
+            android:paddingTop="4dp"
+            android:text="Caídas pendientes"
+            android:textStyle="bold"
+            android:textColor="@color/unican"/>
+        <ListView
+            android:id="@+id/fragment_listado_caidas_pendientes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:headerDividersEnabled="true"
+            android:dividerHeight="3dp"
+            android:background="@drawable/contorno_listado"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fragment_listado_boton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fragment_listado_layout_caidas_pendientes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_listado_layout_caidas_atendidas"
+
+        android:text="Atender caída"
+        android:textAllCaps="false"
+        android:textSize="9pt"
+        android:textStyle="bold"
+
+        android:background="@drawable/boton_login"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_listado_layout_caidas_atendidas"
+        android:layout_width="360dp"
+        android:layout_height="290dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/fragment_listado_boton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/contorno_listado">
+        <TextView
+            android:id="@+id/fragment_listado_titulo_atendidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
+            android:paddingTop="4dp"
+            android:text="Caídas atendidas"
+            android:textStyle="bold"
+            android:textColor="@color/unican"/>
+        <ListView
+            android:id="@+id/fragment_listado_caidas_atendidas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:headerDividersEnabled="true"
+            android:dividerHeight="3dp"
+            android:background="@drawable/contorno_listado"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
